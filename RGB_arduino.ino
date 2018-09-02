@@ -36,7 +36,7 @@ int greencount = 0;
 
 int count = 0;
 int mynum;
-int thetime = 0;
+//int thetime = 0;
 
 bool HRO = false;
 
@@ -212,7 +212,7 @@ void loop() {
     if(randomvalue == true){
       mynum = rand()%8;
     }
-    mynum = (count%8);
+    mynum = count%7;
     switch (mynum){
       case 0:
         thecolor.red = 255;
@@ -262,6 +262,7 @@ void loop() {
     
   
     count++;
+    count = count%8;
     }
   
   setColor(thecolor);
